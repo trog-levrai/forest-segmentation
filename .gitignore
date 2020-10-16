@@ -1,0 +1,4 @@
+*.swp
+.env
+data/s2a/*
+notebooks/.ipynb_checkpoints/*
