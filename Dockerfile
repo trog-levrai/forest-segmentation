@@ -7,6 +7,7 @@ COPY pyproject.toml poetry.lock .
 RUN pip install poetry==1.1.3
 
 RUN poetry config virtualenvs.create false
-RUN poetry install --no-dev --no-interaction
+RUN poetry export -f requirements.txt | pip install -r /dev/stdin
+
 
 CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
