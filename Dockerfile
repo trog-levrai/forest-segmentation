@@ -2,7 +2,7 @@ FROM python:3.8
 
 WORKDIR /usr/src
 
-COPY pyproject.toml poetry.lock .
+COPY pyproject.toml poetry.lock ./
 
 RUN pip install poetry==1.1.3
 
